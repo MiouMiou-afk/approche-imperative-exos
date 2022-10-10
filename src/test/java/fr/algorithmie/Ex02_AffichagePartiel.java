@@ -1,5 +1,11 @@
 package fr.algorithmie;
 
+import static org.junit.Assert.assertArrayEquals;
+
+import java.io.Console;
+
+import javax.imageio.metadata.IIOMetadataFormat;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -24,21 +30,36 @@ public class Ex02_AffichagePartiel {
 	@Question(numero=1)
 	public void affichageValeursSup3() {
 		
+		for (int i=0; i<array.length;i++) {
+			if (array[i]>=3) {
+				Resultat.log(array[i]);
+			}
+		}
 		//TODO En utilisant une boucle et un if, LOGUER avec Resultat.log 
 		// les valeurs du tableau supérieures ou égales à 3
 	}
 	
+	
+
 	@Test
 	@Question(numero=2)
 	public void affichageValeursPaires() {
-		
+		for (int i=0; i<array.length;i++) {
+			if (array[i]%2==0) {
+				Resultat.log(array[i]);
+			}
+		}
 		//TODO LOGUER avec Resultat.log les valeurs paires du tableau (0 sera considéré comme pair)
 	}
 	
 	@Test
 	@Question(numero=3)
 	public void affichageIndexPairs() {
-		
+		for (int i=0; i<array.length;i++) {
+			if (i%2==0) {
+				Resultat.log(array[i]);
+			}
+		}
 		//TODO LOGUER avec Resultat.log les valeurs correspondant aux index pairs du tableau 
 		// (0 sera considéré comme pair)
 	}
@@ -46,8 +67,11 @@ public class Ex02_AffichagePartiel {
 	@Test
 	@Question(numero=4)
 	public void affichageValeursImpaires() {
-		
-		//TODO LOGUER avec Resultat.log les valeurs impaires positives du tableau (0 doit être exclu)
-		
+		for (int i=0; i<array.length;i++) {
+			if (array[i]%2==1) {
+				Resultat.log(array[i]);
+			}
+		}
+		//TODO LOGUER avec Resultat.log les valeurs impaires du tableau (0 doit être exclu)
 	}
 }
