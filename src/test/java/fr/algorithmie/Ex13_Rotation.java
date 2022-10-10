@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import outils.Exercice;
 import outils.ExerciceRunner;
 import outils.Question;
+import outils.Resultat;
 
 /**
  * Ne modifiez ni les noms des classes, ni les noms des méthodes.
@@ -14,27 +15,38 @@ import outils.Question;
  *
  */
 @RunWith(ExerciceRunner.class)
-@Exercice(nom="Rotation")
+@Exercice(nom = "Rotation")
 public class Ex13_Rotation {
 
-	// TODO Effectuez une rotation à droite des éléments du tableau array
-			// Exemple : si le tableau contient {0,1,2,3} alors il contiendra {3,0,1,2}
-			// après rotation
-			
-			// TODO Afficher le contenu du tableau après rotation avec Resultat.log
+	// NE PAS CHANGER LES NOMS
+	// mais vous pouvez modifier les valeurs contenues dans array
+	int[] array = { 0, 1, 2, 3 };
 
-	int [] tab2=new int [array.length];
-	for(int i=0;i<tab2.length;i++) {
-		if(i==0) {
-			tab2[i]=array[array.length-1];
+	/**
+	 * Ne pas modifier les informations portées par l'annotation.
+	 */
+	@Test
+	@Question(numero = 1)
+	public void afficherAlgo() {
+
+		// TODO Effectuez une rotation à droite des éléments du tableau array
+		// Exemple : si le tableau contient {0,1,2,3} alors il contiendra {3,0,1,2}
+		// après rotation
+
+		// TODO Afficher le contenu du tableau après rotation avec Resultat.log
+
+		int[] tab2 = new int[array.length];
+		for (int i = 0; i < tab2.length; i++) {
+			if (i == 0) {
+				tab2[i] = array[array.length - 1];
+			} else {
+				tab2[i] = array[i - 1];
+			}
+ 
+			Resultat.log(tab2[i]);
+
 		}
-		else {
-			tab2[i]=array[i-1];
-		}
-		System.out.println(tab2[0]+" "+tab2[1]+" "+tab2[2]+" "+tab2[3]);
-		Resultat.log(tab2[i]);
-		
+
 	}
 
-
-		}
+}
